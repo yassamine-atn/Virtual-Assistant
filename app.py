@@ -22,7 +22,7 @@ tokenizer=pickle.load(pickle_in)
 pickle_in=open("labels.pickle","rb")
 labels=pickle.load(pickle_in)
 transcription=""
-
+emo_reco=load_model("emtion_recognition.h5")
 def extract_feature(file_name, **kwargs):
    
     mfcc = kwargs.get("mfcc")
@@ -53,7 +53,20 @@ def extract_feature(file_name, **kwargs):
             tonnetz = np.mean(librosa.feature.tonnetz(y=librosa.effects.harmonic(X), sr=sample_rate).T,axis=0)
             result = np.hstack((result, tonnetz))
     return result
+def emotionanalysis(pth):
+    l={'surprised':0.0,'sad':1.0,'neutral':3.0,'angry':4.0}
+    features = extract_feature(pth, mfcc=True, chroma=True, mel=True)
+    x=[]
+    x.append(features)
+    x=np.array(x)
+    x = np.expand_dims(x, axis=2)
+    res=emo_reco.predict(x)
+    res=np.argmax(res, axis=1)
 
+    key_list = list(l.keys())
+    val_list = list(l.values())
+    position = val_list.index(res[0])
+    return(key_list[position])
 
 
 
