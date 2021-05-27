@@ -106,7 +106,8 @@ sentimenttext : any ;
    
   console.log(this.text)
   this.sc.getintentsample(this.text).subscribe(data=>this.intenttext=data)
-this.sc.getSentiment().subscribe(data=>this.sentimenttext=(data))
+  this.sc.getSentiment().subscribe(data=>this.sentimenttext=data)
+
 }
   handleFileInput(files: FileList) {
     this.fileToUpload = files.item(0);
@@ -119,8 +120,7 @@ uploadFileToActivity() {
     
     console.log(this.text)
     this.sc.getintentsample(this.text).subscribe(data=>this.intenttext=data)
-this.sc.postFileSentiment(this.fileToUpload).subscribe(data=>this.sentimenttext=(data))
-
+    this.sc.postFileSentiment(this.fileToUpload).subscribe(data=>this.sentimenttext=data)
     };
     uploadaudio(){
      
@@ -128,7 +128,8 @@ this.sc.postFileSentiment(this.fileToUpload).subscribe(data=>this.sentimenttext=
       this.sc.audio_browser(this.b).subscribe(data=>this.text=data);
       console.log(this.b)
       this.sc.getintentsample(this.text).subscribe(data=>this.intenttext=data)
-this.sc.audio_browsersentiment(this.b).subscribe(data=>this.sentimenttext=(data))
+      this.sc.audio_browsersentiment(this.b).subscribe(data=>this.sentimenttext=data)
+
     }
     
 }

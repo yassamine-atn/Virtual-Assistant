@@ -1,4 +1,7 @@
-{ "python.pythonPath": "C:\\Users\\e5641272\\Anaconda3\\python.exe", 
-    "python.analysis.extraPaths": ["app.py", "./env/Lib/site-packages"]
+{
+    "python.analysis.extraPaths": [
+        "app.py",
+        "./env/Lib/site-packages"
+    ]
 
 }
