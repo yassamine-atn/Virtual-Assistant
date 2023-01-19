@@ -1,4 +1,5 @@
 # DeepX : A Voice Based Cutomer Service Virtual Assistant 
+![Screenshot](screenshot1.PNG)
 
 Voice assistants can be extremely useful for financial services institutions as it can actively enhance the customer experience, from speeding up issue resolution
 to increase engagement. Our system DeepX integrates transcription of customer complaints with analysis of their content then responds with the results.
