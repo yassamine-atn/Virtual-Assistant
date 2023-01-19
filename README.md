@@ -3,6 +3,14 @@
 
 Voice assistants can be extremely useful for financial services institutions as it can actively enhance the customer experience, from speeding up issue resolution
 to increase engagement. Our system DeepX integrates transcription of customer complaints with analysis of their content then responds with the results.
+The client can either upload an audio of the complaint or record from the browser
+as shown below
+
+![Screenshot](screenshot2.PNG)
+
+Once the complaint is processed, we click on compute button to hear the results. We can also display the final results by clicking on the “show result” link. An example is given below in
+
+![Screenshot](screenshot3.PNG)
 
 # Running on native machine
 
