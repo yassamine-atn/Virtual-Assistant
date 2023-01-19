@@ -81,7 +81,7 @@ Once the complaint is processed, we click on compute button to hear the results.
 
  ``` ng serve --open```
 
-# Speech Recognition
+# Speech Recognition (Speech to text) 
 
 ## Scripts
 **For more details make sure to visit these files to look at script arguments and description**
@@ -100,7 +100,7 @@ Once the complaint is processed, we click on compute button to hear the results.
 
 Note: this approache didn t give good results due to the quality of the microphone and other factors ( i ve recorded some samples with my mic ) 
 
-# Intent Analysis
+# Intent Analysis (Natural language processing) 
 
 ## Scripts
 **For more details make sure to visit these files to look at script arguments and description**
